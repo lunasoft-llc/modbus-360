@@ -2,9 +2,9 @@
 
 ![MODBUS360 Header](header.png)
 
-[![Version](https://img.shields.io/badge/version-1.2.13-blue?style=for-the-badge)](https://github.com/lunasoft-llc/modbus360/releases)
+[![Version](https://img.shields.io/badge/version-1.2.13-blue?style=for-the-badge)](https://github.com/lunasoft-llc/modbus-360/releases)
 [![.NET](https://img.shields.io/badge/.NET-9.0-purple?style=for-the-badge)](https://dotnet.microsoft.com/download)
-[![Platform](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-brightgreen?style=for-the-badge)](https://github.com/lunasoft-llc/modbus360/releases)
+[![Platform](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-brightgreen?style=for-the-badge)](https://github.com/lunasoft-llc/modbus-360/releases)
 
 MODBUS 360 is a cross-platform tool for monitoring, testing, visualizing, and controlling Modbus devices.
 
@@ -104,7 +104,7 @@ Addresses are zero-based. Supported tables are `Coil`, `DiscreteInput`, `Holding
 
 ### Windows
 
-Download the latest installer or portable ZIP from [GitHub Releases](https://github.com/lunasoft-llc/modbus360/releases).
+Download the latest installer or portable ZIP from [GitHub Releases](https://github.com/lunasoft-llc/modbus-360/releases).
 
 The installer adds **Modbus360 Master** and **Modbus360 Slave** to both the Start menu and the desktop. For the portable build, run `Modbus360.exe` to open Master or `Modbus360.exe --slave` to open Slave Server directly.
 
@@ -114,12 +114,10 @@ Download the self-contained Linux archive from GitHub Releases. Preserve executa
 
 ### macOS
 
-Separate bundles are produced for Apple Silicon and Intel:
+Apple Silicon (M1/M2/M3/M4) Macs are supported. Intel Macs are not.
 
 - `Modbus360-macOS-Apple-Silicon-*.dmg`
 - `Modbus360-macOS-Apple-Silicon-*.zip`
-- `Modbus360-macOS-Intel-*.dmg`
-- `Modbus360-macOS-Intel-*.zip`
 
 The ZIP files contain the complete `Modbus360.app` bundle. No separate .NET runtime is required.
 

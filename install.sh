@@ -14,13 +14,12 @@ fi
 
 # Çip növünü (arxitekturanı) təyin edirik
 ARCH=$(uname -m)
-if [ "$ARCH" = "arm64" ]; then
-    echo "Apple Silicon çipi təyin edildi (M1/M2/M3/M4)..."
-    URL=$(curl -s https://api.github.com/repos/lunasoft-llc/modbus360/releases/latest | grep -o "https://[^\"]*Apple-Silicon[^\"]*\.zip" | head -n 1)
-else
-    echo "Intel çipi təyin edildi..."
-    URL=$(curl -s https://api.github.com/repos/lunasoft-llc/modbus360/releases/latest | grep -o "https://[^\"]*Intel[^\"]*\.zip" | head -n 1)
+if [ "$ARCH" != "arm64" ]; then
+    echo "Xəta: Modbus360 yalnız Apple Silicon (M1/M2/M3/M4) Mac-ləri dəstəkləyir. Intel Mac-lər dəstəklənmir."
+    exit 1
 fi
+echo "Apple Silicon çipi təyin edildi (M1/M2/M3/M4)..."
+URL=$(curl -s https://api.github.com/repos/lunasoft-llc/modbus-360/releases/latest | grep -o "https://[^\"]*Apple-Silicon[^\"]*\.zip" | head -n 1)
 
 if [ -z "$URL" ]; then
     echo "Xəta: Ən son versiyanın linki tapılmadı."
